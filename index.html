@@ -9,30 +9,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="controls" style="position:absolute; bottom: 10px; right: 10px; left:1040px; ">
-        <button id="up" style="width: 40px; height: 40px;">↑</button><br>
-        <button id="left" style="width: 40px; height: 40px;">←</button>
-        <button id="right" style="width: 40px; height: 40px;">→</button><br>
-        <button id="down" style="width: 40px; height: 40px;">↓</button>
-      </div>
+    <div id="controls">
+        <button id="up">↑</button>
+        <div>
+            <button id="left">←</button>
+            <button id="right">→</button>
+        </div>
+        <button id="down">↓</button>
+    </div>
           
-      
     <div class="container noselect">
-            <div id="author">
-                <h1> reach to specific score and U win &#x1F389;</h1>
-            </div>
+        <div id="author">
+            <h1>Reach a specific score and you win! &#x1F389;</h1>
+        </div>
         <div id="canvas"></div>
-            <div id="ui">
-                <h2>SCORE</h2>
-                <br>
-                <span id="score">00</span>
-            </div>
+        <div id="ui">
+            <h2>SCORE</h2>
+            <span id="score">00</span>
+        </div>
         <button id="replay">
             <i class="fas fa-play"></i>
-            RESTART
         </button>
-        </div>
     </div>
-
 </body>
 </html>
