@@ -1,89 +1,120 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #222738;
+  height: 100%;
+}
+
+canvas {
+  background-color: #181825;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* Ensure game content is above the control buttons */
+}
+
+#ui {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+#score {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.noselect {
+  user-select: none;
+}
+
+#controls {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  z-index: 100; /* Ensure controls are on top of everything */
+}
+
+#controls button {
+  font-size: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100; /* Ensure the button is clickable */
+}
+
+#controls button:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#replay {
+  font-size: 15px;
+  padding: 10px 20px;
+  background: #6e7888;
+  border: none;
+  color: #222738;
+  border-radius: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+#replay:hover {
+  background: #a6aab5;
+  background: #4cffd7;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 600px) {
+  #controls {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      bottom: 10px;
   }
-  html,
-  body {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    background-color: #222738;
-  }
-  canvas {
-    background-color: #181825;
-  }
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  #ui {
-    text-align: center;
-    font-size: 10px;
-    margin-top: 10px;
-  }
-  #score {
-    margin-top: 10px;
-    font-size: 40px;
-    font-weight: 800;
-  }
-  .noselect {
-    user-select: none;
-  }
+
   #controls button {
-    font-size: 18px;
-    padding: 10px;
-    margin: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #controls button:active {
-    background-color: rgba(0, 0, 0, 0.7);
+      font-size: 20px;
+      width: 40%;
   }
 
   #replay {
-    font-size: 15px;
-    padding: 10px 20px;
-    background: #6e7888;
-    border: none;
-    color: #222738;
-    border-radius: 20px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  #replay:hover {
-    background: #a6aab5;
-    background: #4cffd7;
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  @media (max-width: 600px) {
-    #replay {
       margin-bottom: 20px;
-    }
-    #replay,
-    h2 {
-      transform: rotate(0deg);
-    }
-    #ui {
-      flex-flow: row wrap;
-      margin-bottom: 20px;
-    }
-    #score {
+  }
+
+  #score {
       margin-top: 0;
       margin-left: 20px;
-    }
-    .container {
+  }
+
+  .container {
       flex-flow: column wrap;
-    }
   }
-  #author {
-    text-align: center;
-    padding-bottom: 10px;
-  }
+}
+
+#author {
+  text-align: center;
+  padding-bottom: 10px;
+}
