@@ -411,6 +411,7 @@ function incrementScore() {
     CTX.font = "15px Poppins, sans-serif";
     CTX.fillText(`SCORE   ${score}`, W / 2, H / 2 + 60);
     CTX.fillText(`MAXSCORE   ${maxScore}`, W / 2, H / 2 + 80);
+    setTimeout(reset, 3000);
   }
   
   function reset() {
