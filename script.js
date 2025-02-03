@@ -4,8 +4,8 @@ let dom_canvas = document.createElement("canvas");
 document.querySelector("#canvas").appendChild(dom_canvas);
 let CTX = dom_canvas.getContext("2d");
 
-const W = (dom_canvas.width = 500);
-const H = (dom_canvas.height = 500);
+const W = (dom_canvas.width = 350);
+const H = (dom_canvas.height = 350);
 
 
 let snake,
