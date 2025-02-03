@@ -352,7 +352,7 @@ function incrementScore() {
   score++;
   dom_score.innerText = score.toString().padStart(2, "0");
   // Check if score is 22 and redirect
-  if (score === 22) {
+  if (score === 5) {
     window.location.href = "birthday.html"; ; // Change this to your desired page
   }
 }
